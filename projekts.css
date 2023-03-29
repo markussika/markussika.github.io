@@ -1,0 +1,28 @@
+header{
+    background-color: black;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+}
+ul{
+    display: flex;
+}
+a{
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+a:hover{
+    color:darkgray;
+}
+li{
+    list-style: none;
+    transition: transform 0.3s;
+}
+li:hover{
+    color: grey;
+}
+main{
+    margin-top:200px;
+}
