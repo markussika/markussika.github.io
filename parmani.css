@@ -1,0 +1,153 @@
+header {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 4;
+}
+body {
+  margin: 0;
+  background-image: url(backgr.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+nav {
+  top: 0;
+  background-color: rgb(58, 58, 58);
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: block;
+}
+h1 {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+p {
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+  color: white;
+}
+
+ul {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  height: 100%;
+  justify-content: space-around;
+  margin-top: 0;
+}
+a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+a:hover {
+  color: darkgray;
+}
+li {
+  list-style: none;
+  transition: transform 0.3s;
+}
+li:hover {
+  color: grey;
+  transform: translateX(1.5px);
+}
+main {
+  margin-top: 200px;
+}
+.check {
+  display: none;
+}
+.menu {
+  display: none;
+}
+img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.burger {
+  display: none;
+}
+.close {
+  display: none;
+}
+div {
+  width: 300px;
+  height: 300px;
+  background: purple;
+  transition: width 0.5s, height 0.5s, transform 0.5s;
+}
+.me {
+  display: flex;
+  background-image: url(me.jpg);
+  background-size: cover;
+  border-radius: 20px;
+  margin: auto;
+}
+.me:hover {
+  width: 330px;
+  height: 330px;
+}
+.jk {
+  display: flex;
+  background-image: url(jekabins1.jpg);
+  background-size: cover;
+  border-radius: 20px;
+  margin: auto;
+}
+.jk:hover {
+  width: 330px;
+  height: 330px;
+}
+
+@media (max-width: 420px) {
+  .menu {
+    display: block;
+  }
+  .burger {
+    display: block;
+  }
+  ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    flex-direction: column;
+  }
+  .close {
+    display: block;
+    transform: rotate(180deg) scale(1);
+  }
+  .check:checked ~ .burger .close {
+    transform: rotate(180deg) scale(1);
+  }
+
+  .menu {
+    display: block;
+  }
+  .check:checked ~ .burger .menu {
+    transform: rotate(180deg) scale(0);
+  }
+  .check {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  .check:checked {
+    width: 40px;
+    height: 40px;
+  }
+  .check:checked + ul {
+    display: flex;
+  }
+}
