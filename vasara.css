@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('summer-background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #fff; /* Improved readability on the background */
+}
+
+header {
+    background-color: rgba(0, 123, 255, 0.8);
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+
+h1 {
+    font-size: 42px; /* Larger font size for impact */
+    margin: 0; /* Remove margin for better spacing */
+}
+
+.container {
+    max-width: 800px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    text-align: justify; /* Improve text layout */
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.image {
+    flex-basis: calc(33.33% - 10px);
+    margin-bottom: 20px;
+    cursor: pointer; /* Add a pointer cursor to indicate interactivity */
+}
+
+.image img {
+    max-width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.image img:hover {
+    transform: scale(1.05);
+}
